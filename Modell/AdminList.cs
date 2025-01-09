@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Modell
+{
+    public class AdminList : List<Admin>
+    {
+        public AdminList() { }
+
+        public AdminList(IEnumerable<Admin> list) : base(list) { }
+
+        public AdminList(IEnumerable<Base> list) : base(list.Cast<Admin>().ToList()) { }
+    }
+}
